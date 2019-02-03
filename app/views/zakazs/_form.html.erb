@@ -1,0 +1,44 @@
+<%= form_with(model: zakaz, local: true) do |form| %>
+  <% if zakaz.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(zakaz.errors.count, "error") %> prohibited this zakaz from being saved:</h2>
+
+      <ul>
+      <% zakaz.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :zakaz_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone, id: :zakaz_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dish %>
+    <%= form.text_field :dish, id: :zakaz_dish %>
+  </div>
+
+  <div class="field">
+    <%= form.label :drink %>
+    <%= form.text_field :drink, id: :zakaz_drink %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adress %>
+    <%= form.text_field :adress, id: :zakaz_adress %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @zakaz.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @zakaz.phone %>
+</p>
+
+<p>
+  <strong>Dish:</strong>
+  <%= @zakaz.dish %>
+</p>
+
+<p>
+  <strong>Drink:</strong>
+  <%= @zakaz.drink %>
+</p>
+
+<p>
+  <strong>Adress:</strong>
+  <%= @zakaz.adress %>
+</p>
+
+<%= link_to 'Edit', edit_zakaz_path(@zakaz) %> |
+<%= link_to 'Back', zakazs_path %>
+

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Zakazs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Dish</th>
+      <th>Drink</th>
+      <th>Adress</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @zakazs.each do |zakaz| %>
+      <tr>
+        <td><%= zakaz.name %></td>
+        <td><%= zakaz.phone %></td>
+        <td><%= zakaz.dish %></td>
+        <td><%= zakaz.drink %></td>
+        <td><%= zakaz.adress %></td>
+        <td><%= link_to 'Show', zakaz %></td>
+        <td><%= link_to 'Edit', edit_zakaz_path(zakaz) %></td>
+        <td><%= link_to 'Destroy', zakaz, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Back', root_path %>
+
+
